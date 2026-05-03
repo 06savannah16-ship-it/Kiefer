@@ -6,7 +6,10 @@ Marginalia is an open-source portfolio template for designers, design engineers,
 
 ## Live demo
 
-→ <https://marginalia.demo> (replace with your deploy)
+<img width="3100" height="2122" alt="image" src="https://github.com/user-attachments/assets/a3b4f398-81b8-4b45-b553-0962db20773c" />
+<img width="3094" height="2126" alt="image" src="https://github.com/user-attachments/assets/a2cc10ba-8351-4f0d-97c9-97f3f29939b5" />
+
+
 
 ## Features
 
