@@ -99,6 +99,29 @@ red #8B2E1F, old gold #C9A227. Vertical 9:16 frame, full body head to feet.
 
 After generating, **compress before committing** (Squoosh, ImageOptim, pngquant). Target under 500KB per asset.
 
+#### Use your own photo as reference
+
+Want the figure to actually look like you (or your subject)? Most modern image models accept reference images alongside the prompt — Gemini, Midjourney (`--cref`), DALL·E, Flux Kontext, ChatGPT image, Nano Banana. Workflow:
+
+1. **Attach 1–3 clear photos** of your face / full body. Front-facing, even lighting, neutral expression works best. No sunglasses, no heavy filters.
+2. **Reference them inside the prompt** so the model knows what role they play. Add a line like:
+
+   ```
+   Use the attached photo(s) as the facial reference for the figure —
+   match the face, hair, skin tone, and approximate age. Keep the
+   Renaissance oil-painting style; do NOT photorealistically copy the
+   photo, paint it.
+   ```
+
+3. **Replace the `[DESCRIBE YOURSELF: ...]` placeholder** with a one-line description that matches your photo (e.g. `mid-30s, West African, short coiled hair, calm gaze`). Models lock onto descriptors faster than pixels alone.
+4. **Iterate.** Likeness is the hardest part — regenerate 3–6 times, pick the closest, optionally inpaint the face.
+
+Tool-specific notes:
+
+- **Midjourney:** upload photo, copy URL, prepend to prompt: `<url> <prompt> --cref <url> --cw 80`
+- **Gemini / ChatGPT:** drop the image into chat, then paste the prompt — they pick it up automatically
+- **Flux Kontext / Nano Banana:** use the dedicated reference-image slot in the UI
+
 ### 2. Edit `config.js`
 
 Open `src/marginalia/config.js`. Edit the `SITE` object — your name, role, hero copy, manifesto, section titles, footer, etc.
