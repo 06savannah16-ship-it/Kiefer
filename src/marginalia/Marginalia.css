@@ -1,0 +1,33 @@
+.r-skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  padding: 0.5rem 1rem;
+  background: var(--r-chartreuse);
+  color: var(--r-umber-deep);
+  font-family: var(--r-font-mono);
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+
+.r-skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+}
+
+.r-placeholder {
+  min-height: 60vh;
+  display: grid;
+  place-items: center;
+  background: var(--r-bg);
+  border-top: 1px solid rgba(244, 235, 217, 0.06);
+}
+
+.r-placeholder__label {
+  font-family: var(--r-font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--r-text-muted);
+}

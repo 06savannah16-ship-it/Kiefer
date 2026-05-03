@@ -1,0 +1,55 @@
+.r-sky {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.r-sky__layer {
+  position: absolute;
+  inset: -8% 0 -8% 0;
+  width: 100%;
+  height: 116%;
+}
+
+.r-sky__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+  display: block;
+  transition: filter 600ms var(--r-ease-out);
+  will-change: filter;
+}
+
+/* Crossfade between two gradient stops */
+.r-sky__overlay {
+  position: absolute;
+  inset: 0;
+  background-image: var(--r-grade-a, none);
+  pointer-events: none;
+}
+
+.r-sky__overlay::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--r-grade-b, none);
+  opacity: var(--r-grade-t, 0);
+  pointer-events: none;
+}
+
+.r-sky__vignette {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      ellipse 100% 90% at 50% 50%,
+      transparent 0%,
+      rgba(8, 6, 15, 0.35) 70%,
+      rgba(5, 4, 12, 0.85) 100%
+    );
+  pointer-events: none;
+}

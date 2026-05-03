@@ -1,0 +1,31 @@
+.r-pf {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 100vh;
+  width: auto;
+  z-index: 3;
+  pointer-events: none;
+  overflow: visible;
+  /* Pull figure slightly off the left edge so it always feels grounded */
+  padding-left: 0;
+}
+
+.r-pf__img {
+  height: 100%;
+  width: auto;
+  display: block;
+  user-select: none;
+  filter:
+    drop-shadow(0 18px 50px rgba(10, 8, 18, 0.6))
+    drop-shadow(8px -10px 30px rgba(212, 255, 58, 0.04))
+    brightness(0.92) contrast(1.05);
+  will-change: transform;
+}
+
+@media (max-width: 768px) {
+  .r-pf {
+    height: 80vh;
+    opacity: 0.4;
+  }
+}

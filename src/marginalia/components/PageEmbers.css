@@ -1,0 +1,28 @@
+.r-pe {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.r-pe__ember {
+  position: absolute;
+  bottom: -10px;
+  border-radius: 50%;
+  background: var(--r-chartreuse);
+  box-shadow: 0 0 8px var(--r-chartreuse-glow);
+  opacity: 0;
+  animation-name: r-pe-rise;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  will-change: transform, opacity;
+}
+
+@keyframes r-pe-rise {
+  0%   { transform: translate3d(0, 0, 0); opacity: 0; }
+  10%  { opacity: 0.7; }
+  50%  { transform: translate3d(calc(var(--r-drift) * 0.5), -55vh, 0); opacity: 0.5; }
+  90%  { opacity: 0.15; }
+  100% { transform: translate3d(var(--r-drift), -110vh, 0); opacity: 0; }
+}

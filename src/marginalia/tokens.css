@@ -1,0 +1,56 @@
+/* Marginalia design tokens */
+:root {
+  /* Palette */
+  --r-ivory: #f4ebd9;
+  --r-ivory-soft: #ece1c9;
+  --r-umber: #3b2a1a;
+  --r-umber-deep: #1f160d;
+  --r-venetian: #8b2e1f;
+  --r-gold: #c9a227;
+  --r-gold-soft: #d9b85a;
+  --r-teal: #6b8e9e;
+
+  /* Accent */
+  --r-chartreuse: #d4ff3a;
+  --r-chartreuse-glow: rgba(212, 255, 58, 0.45);
+
+  /* Surfaces */
+  --r-bg: #1a1208;
+  --r-text: var(--r-ivory);
+  --r-text-soft: rgba(244, 235, 217, 0.72);
+  --r-text-muted: rgba(244, 235, 217, 0.5);
+
+  /* Type */
+  --r-font-display: "Instrument Serif", "Fraunces", Georgia, serif;
+  --r-font-body: "Inter", system-ui, -apple-system, sans-serif;
+  --r-font-mono: "Geist Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  /* Motion */
+  --r-ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --r-ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+/* Reset for marginalia-scoped tree */
+.r-root,
+.r-root * {
+  box-sizing: border-box;
+}
+
+/* Lenis smooth scroll baseline */
+html.lenis, html.lenis body { height: auto; }
+html.lenis-smooth { scroll-behavior: auto !important; }
+html.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+html.lenis-stopped { overflow: hidden; }
+
+.r-root {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: var(--r-font-body);
+  background: var(--r-bg);
+  color: var(--r-text);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  isolation: isolate;
+}

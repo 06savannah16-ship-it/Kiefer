@@ -1,0 +1,207 @@
+/* ---------- About section ---------- */
+.r-about {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 8rem 0 6rem;
+  overflow: hidden;
+  isolation: isolate;
+  background: transparent;
+  color: var(--r-text);
+}
+
+/* Bg now provided by SkyCanvas */
+.r-about__bg,
+.r-about__bg-grade,
+.r-about__bg-vignette {
+  display: none;
+}
+
+/* ---------- Content ---------- */
+.r-about__content {
+  position: relative;
+  z-index: 2;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Chapter marker */
+.r-about__chapter {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin: 0;
+  font-family: var(--r-font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--r-text-muted);
+}
+
+.r-about__chapter-numeral {
+  color: var(--r-gold-soft);
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+}
+
+.r-about__chapter-rule {
+  flex: 0 0 60px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(201, 162, 39, 0.6),
+    rgba(244, 235, 217, 0.05)
+  );
+}
+
+.r-about__chapter-label {
+  color: var(--r-chartreuse);
+}
+
+/* Title — display, large, italic accent */
+.r-about__title {
+  font-family: var(--r-font-display);
+  font-weight: 500;
+  font-size: clamp(2rem, 4.4vw, 3.6rem);
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  margin: 0;
+  color: var(--r-ivory);
+  max-width: 22ch;
+  text-wrap: balance;
+}
+
+.r-about__title em {
+  font-style: italic;
+  color: var(--r-gold-soft);
+  font-weight: 400;
+}
+
+/* Body */
+.r-about__body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 56ch;
+  font-family: var(--r-font-body);
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--r-text-soft);
+}
+
+.r-about__body p {
+  margin: 0;
+}
+
+.r-about__body strong {
+  color: var(--r-ivory);
+  font-weight: 600;
+}
+
+/* Signature */
+.r-about__signature {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(244, 235, 217, 0.12);
+}
+
+.r-about__signature-name {
+  font-family: var(--r-font-display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: var(--r-ivory);
+}
+
+.r-about__signature-meta {
+  font-family: var(--r-font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--r-text-muted);
+}
+
+/* Stats */
+.r-about__stats {
+  list-style: none;
+  margin: 1.5rem 0 0;
+  padding: 1.5rem 0 0;
+  border-top: 1px solid rgba(244, 235, 217, 0.12);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.r-about__stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding-right: 1rem;
+  border-right: 1px solid rgba(244, 235, 217, 0.08);
+}
+
+.r-about__stat:last-child {
+  border-right: none;
+}
+
+.r-about__stat-num {
+  font-family: var(--r-font-display);
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 1;
+  color: var(--r-gold-soft);
+  letter-spacing: 0.04em;
+}
+
+.r-about__stat-label {
+  font-family: var(--r-font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--r-ivory);
+}
+
+.r-about__stat-note {
+  font-family: var(--r-font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--r-text-muted);
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 768px) {
+  .r-about {
+    padding: 5rem 0 4rem;
+    min-height: auto;
+  }
+
+  .r-about__content {
+    gap: 1.5rem;
+    padding: 0 1.25rem;
+  }
+
+  .r-about__body {
+    font-size: 0.95rem;
+  }
+
+  .r-about__stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .r-about__stat:nth-child(2) {
+    border-right: none;
+  }
+
+  .r-about__stat-num {
+    font-size: 1.6rem;
+  }
+}

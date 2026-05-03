@@ -1,0 +1,111 @@
+.r-index {
+  position: fixed;
+  top: 50%;
+  right: 1.5rem;
+  transform: translateY(-50%);
+  z-index: 50;
+  padding: 0.75rem 0.5rem;
+}
+
+.r-index__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.r-index__item {
+  display: flex;
+}
+
+.r-index__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.4rem 0.5rem;
+  text-decoration: none;
+  font-family: var(--r-font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--r-text-muted);
+  transition:
+    color 240ms var(--r-ease-out),
+    transform 240ms var(--r-ease-out);
+}
+
+.r-index__link:hover {
+  color: var(--r-ivory);
+}
+
+.r-index__numeral {
+  font-family: var(--r-font-display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 0.95rem;
+  letter-spacing: 0;
+  color: var(--r-gold-soft);
+  min-width: 2ch;
+  text-align: right;
+  opacity: 0.55;
+  transition: opacity 240ms var(--r-ease-out);
+}
+
+.r-index__rule {
+  display: inline-block;
+  width: 18px;
+  height: 1px;
+  background: rgba(244, 235, 217, 0.18);
+  transition:
+    width 320ms var(--r-ease-out),
+    background 240ms var(--r-ease-out);
+}
+
+.r-index__label {
+  opacity: 0;
+  transform: translateX(-4px);
+  transition:
+    opacity 280ms var(--r-ease-out),
+    transform 280ms var(--r-ease-out);
+  white-space: nowrap;
+}
+
+.r-index__item.is-active .r-index__link {
+  color: var(--r-chartreuse);
+}
+.r-index__item.is-active .r-index__numeral {
+  color: var(--r-chartreuse);
+  opacity: 1;
+}
+.r-index__item.is-active .r-index__rule {
+  background: var(--r-chartreuse);
+  width: 30px;
+}
+.r-index__item.is-active .r-index__label {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.r-index__link:hover .r-index__label {
+  opacity: 1;
+  transform: translateX(0);
+}
+.r-index__link:hover .r-index__rule {
+  width: 30px;
+  background: rgba(244, 235, 217, 0.4);
+}
+
+@media (max-width: 768px) {
+  .r-index { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .r-index,
+  .r-index__numeral,
+  .r-index__rule,
+  .r-index__label {
+    transition: none;
+  }
+}
