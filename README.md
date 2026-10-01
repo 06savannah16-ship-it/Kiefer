@@ -2,7 +2,7 @@
 
 **Anselm Kiefer: Matter, Ruin and Transformation**
 
-在线展览：https://06savannah16-ship-it.github.io/Kifer/
+在线展览：https://06savannah16-ship-it.github.io/Kiefer/
 
 一个以滚动叙事展开的线上展览 V1。项目基于 [Marginalia](https://github.com/uxderrick/marginalia) 改造，保留它的 React + Vite、Framer Motion、Lenis 平滑滚动和章节式转场，将视觉语言从 Renaissance portfolio 改为材料剧场与 conservation lab。
 
