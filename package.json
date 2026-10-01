@@ -1,8 +1,8 @@
 {
-  "name": "marginalia",
+  "name": "kiefer-matter-ruin-transformation",
   "version": "0.1.0",
   "private": false,
-  "description": "A modern Renaissance portfolio template — single oil-painting world that color-grades through the day as you scroll. React + Vite + framer-motion + Lenis.",
+  "description": "Anselm Kiefer: Matter, Ruin and Transformation — a scroll-driven online exhibition built from Marginalia.",
   "keywords": [
     "portfolio",
     "template",
@@ -14,15 +14,15 @@
     "scroll-driven",
     "design-engineering"
   ],
-  "author": "Derrick Tsorme <tsormed@gmail.com>",
+  "author": "Exhibition adaptation based on Marginalia by Derrick Tsorme",
   "license": "MIT",
-  "homepage": "https://github.com/uxderrick/marginalia",
+  "homepage": "https://06savannah16-ship-it.github.io/Kifer/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/uxderrick/marginalia.git"
+    "url": "https://github.com/06savannah16-ship-it/Kifer.git"
   },
   "bugs": {
-    "url": "https://github.com/uxderrick/marginalia/issues"
+    "url": "https://github.com/06savannah16-ship-it/Kifer/issues"
   },
   "type": "module",
   "scripts": {
