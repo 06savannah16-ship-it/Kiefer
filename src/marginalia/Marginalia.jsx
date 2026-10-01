@@ -317,6 +317,10 @@ export default function Marginalia() {
                 <div><dt>03</dt><dd>Identity check</dd></div>
               </dl>
               {visitorFileName && <p className="activation-docket__file">LOCAL SPECIMEN / {visitorFileName}</p>}
+              <a className="activation-docket__download" href="https://github.com/06savannah16-ship-it/material-decay-aesthetics" target="_blank" rel="noreferrer">
+                <span>DOWNLOAD THE SKILL</span><em>OPEN SOURCE / GITHUB ↗</em>
+              </a>
+              <small className="activation-docket__download-note">免费下载方法与代码；运行分析或图像生成时，请使用你自己的 API 配置。</small>
               <button type="button" disabled><span>GENERATE TRANSFORMATION</span><em>ACTIVATION PENDING</em></button>
               <small>当前图片只在你的浏览器中预览，不会被上传或保存。实时生成将在展览演示期间开放。</small>
             </div>

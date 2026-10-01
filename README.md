@@ -48,6 +48,8 @@ npm run preview
 
 05 的最后保留了 `Visitor Material Intake` 入口。当前状态为 `API OFFLINE / ACTIVATION PENDING`：观众选择的图片只会在自己的浏览器中预览，不会上传、保存或产生 API 费用。未来接上服务器端 Agent 与图像生成接口时，可以保留现有界面，只替换提交逻辑。
 
+入口同时提供 [`Download the Skill`](https://github.com/06savannah16-ship-it/material-decay-aesthetics)：方法与代码可以免费下载，使用者通过自己的 API 配置运行，展览方无需为下载者的调用付费。
+
 ## GitHub Pages 发布
 
 推送到 `main` 后，GitHub Actions 会自动构建并部署。首次发布时，需要在仓库 Settings → Pages 中把 Source 设为 `GitHub Actions`。
